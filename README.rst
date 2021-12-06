@@ -1,7 +1,7 @@
 Standard Git Library for ESMF applications.
 ===========================================
 
-**esmf-git** is a simple library for implementing Git functionality into a python application.
+**esmf-git** is a library for implementing Git functionality inside a python application.
 
 The ``_command_safe`` wrapper does a few things:
 
