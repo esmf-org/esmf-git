@@ -6,6 +6,7 @@
 import os
 import sys
 import codecs
+import subprocess
 
 from setuptools import setup
 
@@ -16,7 +17,7 @@ with codecs.open(os.path.join(here, "README.rst"), encoding="utf-8") as f:
 
 
 if sys.argv[-1] == "publish":
-    os.system("python setup.py sdist bdist_wheel upload")
+    subprocess.call(f"{sys.executable} setup.py sdist bdist_wheel upload", shell=False)
     sys.exit()
 
 required = [""]
