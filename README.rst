@@ -1,6 +1,15 @@
 Standard Git Library for ESMF applications.
 ===========================================
 
+.. image:: https://github.com/esmf-org/esmf-git/actions/workflows/pylint.yml/badge.svg
+    :target: https://github.com/esmf-org/esmf-git/actions/workflows/pylint.yml
+    :alt:  Lint and Test
+
+.. image:: https://github.com/esmf-org/esmf-git/actions/workflows/python-publish.yml/badge.svg
+   :target: https://github.com/esmf-org/esmf-git/actions/workflows/python-publish.yml
+   :alt: Upload Python Package 
+
+
 **esmf-git** is a library for implementing Git functionality inside a python application.
 
 The ``_command_safe`` wrapper does a few things:
