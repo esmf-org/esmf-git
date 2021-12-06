@@ -26,6 +26,7 @@ setup(
     version="0.0.1",
     description="Standard Git Library for ESMF applications.",
     long_description=long_description,
+    long_description_content_type="text/x-rst",
     author="Ryan Long",
     author_email="ryan.long@noaa.gov",
     url="",
