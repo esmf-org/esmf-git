@@ -1,6 +1,10 @@
 Standard Git Library for ESMF applications.
 ===========================================
 
+.. image:: https://img.shields.io/pypi/v/esmf_git.svg
+    :target: https://pypi.org/project/esmf-git/
+    :alt: PyPi Link
+
 .. image:: https://github.com/esmf-org/esmf-git/actions/workflows/pylint.yml/badge.svg
     :target: https://github.com/esmf-org/esmf-git/actions/workflows/pylint.yml
     :alt:  Lint and Test
@@ -8,10 +12,10 @@ Standard Git Library for ESMF applications.
 .. image:: https://github.com/esmf-org/esmf-git/actions/workflows/python-publish.yml/badge.svg
    :target: https://github.com/esmf-org/esmf-git/actions/workflows/python-publish.yml
    :alt: Upload Python Package 
-   
-.. image:: https://img.shields.io/pypi/v/esmf_git.svg
-    :target: https://pypi.org/project/esmf-git/
-    :alt: PyPi Link
+
+.. image:: https://www.codefactor.io/repository/github/esmf-org/esmf-git/badge/main
+   :target: https://www.codefactor.io/repository/github/esmf-org/esmf-git/overview/main
+   :alt: CodeFactor
 
 **esmf-git** is a library for implementing Git functionality inside a python application.
 
