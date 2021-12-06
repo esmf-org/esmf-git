@@ -78,7 +78,7 @@ def status(repopath=os.getcwd()):
     return _command_safe(["git", "status"], repopath)
 
 
-def pull(destination="origin", branch="", repopath=os.getcwd()):
+def pull(destination="origin", branch=None, repopath=os.getcwd()):
     """git_pull
 
     Args:
@@ -90,11 +90,13 @@ def pull(destination="origin", branch="", repopath=os.getcwd()):
         CompletedProcess
     """
 
-    cmd = ["git", "pull", destination, branch]
+    cmd = ["git", "pull", destination]
+    if branch:
+        cmd.append(branch)
     return _command_safe(cmd, repopath)
 
 
-def push(destination="origin", branch="", repopath=os.getcwd()):
+def push(destination="origin", branch=None, repopath=os.getcwd()):
     """git_push
 
     Args:
@@ -105,7 +107,9 @@ def push(destination="origin", branch="", repopath=os.getcwd()):
     Returns:
         CompletedProcess
     """
-    cmd = ["git", "push", destination, branch]
+    cmd = ["git", "push", destination]
+    if branch:
+        cmd.append(branch)
     return _command_safe(cmd, repopath)
 
 
