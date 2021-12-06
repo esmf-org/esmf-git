@@ -1,7 +1,7 @@
 """
 Git commands module
 
-Subprocess convenience module for interacting with Git
+Module for interacting with Git command line interface
 
 author: Ryan Long <ryan.long@noaa.gov>
 """
@@ -73,7 +73,7 @@ def status(repopath=os.getcwd()):
         repopath (str, optional): The root path of the repo. Defaults to os.getcwd().
 
     Returns:
-        _command_safe
+        CompletedProcess
     """
     return _command_safe(["git", "status"], repopath)
 
@@ -83,13 +83,14 @@ def pull(destination="origin", branch="", repopath=os.getcwd()):
 
     Args:
         destination (str, optional): Defaults to "origin".
+        branch (str, optional): Defaults to current branch.
         repopath (str, optional): Defaults to os.getcwd().
 
     Returns:
         CompletedProcess
     """
 
-    cmd = ["git", "pull", branch, destination]
+    cmd = ["git", "pull", destination, branch]
     return _command_safe(cmd, repopath)
 
 
@@ -98,12 +99,13 @@ def push(destination="origin", branch="", repopath=os.getcwd()):
 
     Args:
         destination (str, optional): Defaults to "origin".
+        branch (str, optional): Defaults to current branch.
         repopath (str, optional): Defaults to os.getcwd().
 
     Returns:
         CompletedProcess
     """
-    cmd = ["git", "push", branch, destination]
+    cmd = ["git", "push", destination, branch]
     return _command_safe(cmd, repopath)
 
 
