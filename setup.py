@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# pylint: disable=missing-module-docstring
+
 import os
 import sys
 import codecs

@@ -1,3 +1,4 @@
+# pylint: disable=all
 import esmf_git as git
 
 
