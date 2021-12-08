@@ -62,13 +62,11 @@ def checkout(branch_name, target=None, destination=None, repopath=os.getcwd()):
         CompletedProcess:
     """
     cmd = ["git", "checkout"]
-    print(target)
     if target is None:
         cmd.append(branch_name)
     else:
         cmd.append(f"{target}/{branch_name}")
         cmd.append(f"{destination}/{branch_name}")
-    print(cmd)
     return _command_safe(cmd, repopath)
 
 
