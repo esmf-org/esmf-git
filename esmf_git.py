@@ -51,6 +51,20 @@ def add(repopath=os.getcwd()):
     return _command_safe(cmd, repopath)
 
 
+def checkout(branch_name, repopath=os.getcwd()):
+    """git_checkout
+
+    Args:
+        branch_name (str): name of the branch being checked out
+        repopath (str, optional): local repository path if not cwd. Defaults to os.getcwd().
+
+    Returns:
+        CompletedProcess:
+    """
+    cmd = ["git", "checkout", branch_name]
+    return _command_safe(cmd, repopath)
+
+
 def commit(message, repopath=os.getcwd()):
     """git_commit
 
