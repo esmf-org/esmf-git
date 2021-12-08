@@ -51,7 +51,7 @@ def add(repopath=os.getcwd()):
     return _command_safe(cmd, repopath)
 
 
-def checkout(branch_name, repopath=os.getcwd()):
+def checkout(branch_name, target=None, destination=None, repopath=os.getcwd()):
     """git_checkout
 
     Args:
@@ -61,7 +61,14 @@ def checkout(branch_name, repopath=os.getcwd()):
     Returns:
         CompletedProcess:
     """
-    cmd = ["git", "checkout", branch_name]
+    cmd = ["git", "checkout"]
+    print(target)
+    if target is None:
+        cmd.append(branch_name)
+    else:
+        cmd.append(f"{target}/{branch_name}")
+        cmd.append(f"{destination}/{branch_name}")
+    print(cmd)
     return _command_safe(cmd, repopath)
 
 
