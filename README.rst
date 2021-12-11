@@ -1,4 +1,4 @@
-Standard Git Library for ESMF applications .
+Standard Git Library for ESMF applications.
 ===========================================
 
 .. image:: https://img.shields.io/pypi/v/esmf_git.svg
