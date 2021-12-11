@@ -27,5 +27,6 @@ jobs:
       uses: actions/download-artifact@v2.1.0
       with:
         name: summary.txt
+        path: esmf-git/summary.txt
         
     
