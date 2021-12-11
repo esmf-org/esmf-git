@@ -10,7 +10,7 @@ name: Run Weekly Summary
 
 on:
   release:
-    types: [commit]
+    types: [push]
 
 jobs:
   deploy:
