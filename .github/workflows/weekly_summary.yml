@@ -16,9 +16,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Git checkout
+      uses: actions/checkout@v2
     - name: Run summary
-      run:  git log --since="one week ago" --pretty=oneline > summary.txt
-      
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+        git log --since="one week ago" --pretty=oneline > summary.txt
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2.1.0
       with:
