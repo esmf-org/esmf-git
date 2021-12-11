@@ -19,5 +19,11 @@ jobs:
 
     steps:
     - name: Run summary
-      run:  git log --since="one week ago" --pretty=oneline
+      run:  git log --since="one week ago" --pretty=oneline > summary.txt
+      
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2.1.0
+      with:
+        name: summary.txt
+        
     
