@@ -24,9 +24,9 @@ jobs:
         git config user.email "<>"
         git log --since="one week ago" --pretty=oneline > summary.txt
     - name: Download a Build Artifact
-      uses: actions/upload-artifact@v2.1.0
+      uses: actions/upload-artifact@v2
       with:
-        name: summary.txt
-        path: esmf-git/summary.txt
+        name: summary
+        path: summary.txt
         
     
