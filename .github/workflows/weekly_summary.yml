@@ -8,9 +8,7 @@
 
 name: Run Weekly Summary
 
-on:
-  release:
-    types: [push]
+on: [push]
 
 jobs:
   deploy:
