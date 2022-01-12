@@ -37,7 +37,7 @@ def _command_safe(cmd, cwd=os.getcwd()) -> subprocess.CompletedProcess:
         return subprocess.CompletedProcess(returncode=0, args="", stdout=error.stdout)
 
 
-def add(repopath=os.getcwd()):
+def add(_file_path=None, repopath=os.getcwd()):
     """git_add
 
     Args:
@@ -48,6 +48,8 @@ def add(repopath=os.getcwd()):
         CompletedProcess:
     """
     cmd = ["git", "add", "--all"]
+    if _file_path is not None:
+        cmd = ["git", "add", _file_path]
     return _command_safe(cmd, repopath)
 
 
