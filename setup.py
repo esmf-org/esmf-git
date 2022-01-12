@@ -24,7 +24,7 @@ required = [""]
 
 setup(
     name="esmf_git",
-    version="0.5.0",
+    version="0.6.0",
     description="Standard Git Library for ESMF applications.",
     long_description=long_description,
     long_description_content_type="text/x-rst",
