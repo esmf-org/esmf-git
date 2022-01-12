@@ -33,7 +33,7 @@ setup(
     url="",
     py_modules=["esmf_git"],
     install_requires=required,
-    tests_require=["pytest"],
+    tests_require=["pytest", "bump2version"],
     license="MIT",
     classifiers=[
         "Programming Language :: Python",
